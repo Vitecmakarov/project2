@@ -1,945 +1,1291 @@
+body{
+    margin: 0px;
+}
 h1{
+    position: relative;
     color: #333333;
     font-family: Lato;
     font-size: 45px;
     font-weight: 400;
     line-height: 60px;
-    position: absolute;
-    margin: 0px;
+    margin: auto;
+    text-align: center;
+    width: 95%;
+}
+
+@media (max-width: 1250px) {
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
 }
 
 h2{
+    position: relative;
     color: #333333;
     font-family: Lato;
     font-size: 24px;
     font-weight: 400;
     line-height: 46px;
-    margin: 0px;
-    max-height: 23px;
-    position: absolute;
+    margin: auto;
+    width: 95%;
+}
+
+@media (max-width: 1250px) {
+    h2{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 h3{
-    width: 899px;
-    height: 54px;
+    position: relative;
     opacity: 0.8;
     color: #333333;
     font-family: Lato;
     font-size: 20px;
     font-weight: 700;
     line-height: 34px;
-    position: absolute;
+    margin: auto;
     text-align: center;
+    width: 95%;
+    margin-top: 5%;
+}
+@media (max-width: 1250px) {
+    h3{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 p{
+    position: relative;
     opacity: 0.8;
     color: #333333;
     font-family: Lato;
     font-size: 20px;
     font-weight: 400;
     line-height: 34px;
-    margin: 0px;
-    position: absolute;
+    margin: 0;
 }
 
+@media (max-width: 1250px) {
+    p{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
 
-/* Style for "Layer 91" */
-.Layer91{
+section{
     position: relative;
-    width: 1916px;
-    height: 1124px;
-    background-image:url(../images/image1.jpg);
+    width: 100%;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+@media (max-width: 1250px) {
+    section{
+        padding: 200px 0;
+    }
+}
+
+div.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    position: fixed;
+    transition: all .3s;
+    overflow-x: hidden;
+    background:inherit;
+}
+
+/* Style for "Header" */
+
+section.header{
+    background-image:url(../images/6.jpg);
+    z-index: 2;
+    min-height: 100vh;
   }
+
 /* Style for "Colorful Flat" */
 
-.Layer91 div.box{
-    position: absolute;
-    width:520px;
-    height: 47px;
-    left: 721px;
-    top: 143px;
-}
-
- .Layer91 h2{
-    position: relative;
+ section.header h2{
     color: #ffffff;
-    font-size: 62px;
+    font-size: 64px;
     line-height: 40px;
     text-transform: uppercase;
-}
-
-.Layer91 h2.bold{
-    float: left;
-    font-family: "Lato - Black";
     font-weight: 900;
+    font-family: "Lato - Black";
+    text-align: center;
 }
 
-.Layer91 h2.reg{
-    float: right;
-    font-family: Lato;
-    font-weight: 300;
-}
 
-/* Style for "Menu-ico" */
-
-.menu-ico{
-    position: absolute;
-    left: 116px;
-    top: 109px;
-    width: 54px;
-    height: 36px;
+.wrapper{
+    width: 80px;
+    position: fixed;
+    color: white;
+    text-align: center;
+    height: 60px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    font-family: "Material Icons";
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 61.36px;
-    text-transform: uppercase;
-    margin: 0px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+@media (max-width: 1250px) {
+    .wrapper{
+        width: 130px;
+        height: 110px;
+    }
 }
 
-/* Style for "The best of" */
+#check-menu{
+    display: none;
+}
 
-.The-best-o{
+.menu-icon{
+    display: block;
     position: absolute;
-    top: 324px;
-    left: 715px;
-    width: 483px;
-    height: 32px;
-    color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.burger-line{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 100%;
+    height: 10%;
+    background-color:#fff;
+    transition: .3s all;
+}
+
+.second, .third{
+    top: 50%;
+}
+
+.fourth{
+    top: 80%;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    width: 760%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+    border-radius:2%;
+}
+
+@media (max-width: 1250px) {
+    .main-menu{
+        transition: 0s all;
+    }
+}
+
+a.menu-item{
+    display: block;
+    width: 98%;
+    text-decoration: none;
     font-family: Lato;
-    font-size: 34px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 56px;
-    margin: 0px;
+    line-height: 3rem;
+    background-color:white;
+    color:black;
+    opacity: 0.85;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+@media (max-width: 1250px) {
+    a.menu-item{
+        font-size: 4rem;
+        line-height: 7rem;
+    }
+}
+
+a:hover{
+    background-color: rgba(0,0,0,.9);
+    color: grey;
+    transition: 0.5s;
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 85vh;
+}
+
+@media (max-width: 1250px) {
+    #check-menu:checked ~ .main-menu{
+        overflow-y: scroll;
+    }
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+
+
+p.header{
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    top: 13vh;
+    font-size: 34px;
 }
 
  /* Style for "Web Proffesionals" */
 
-.web-proffe{
-    position: absolute;
-    left: 515px;
-    top: 386px;
-    width: 871px;
-    height: 83px;
+p.web-proffe{
+    width: 100%;
     color: #ffffff;
-    font-family: Lato;
     font-size: 112px;
     font-weight: 300;
     line-height: 120px;
-    margin: 0px;
+    text-align: center;
+    top: 17vh;
 }
 
 /* Style for "Shape 1" */
 .shape-1{
     position: relative;
-    left: 773px;
-    top: 618px;
     width: 370px;
-    height: 315px;
     box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.3);
     background-color:#dbdbda;
-    margin: 0px;
-    border-radius: 4px;
-    padding-top: 30px;
+    margin: auto;
+    text-align: center;
+    border-radius: 4%;
+    padding: 30px 0;
+    top: 21vh;
 }
- /* Style for "Shape-1 input" */
+@media (max-width: 1250px) {
+    .shape-1{
+        width:80%;
+    }
+}
  
 .shape-1 input{
     width: 310px;
-    height: 51px;
     border: 1px solid #cccccc;
-    margin: 0px;
-    margin-bottom: 10px;
-    margin-left: 30px;
     opacity: 0.8;
     color: #333333;
     font-family: Lato;
     font-size: 20px;
     font-weight: 400;
     line-height: 22px;
-    padding-left: 19px;
+    padding: 5% 3%;
+    margin-bottom: 3%;
 }
- /* Style for "Shape-1 button" */
 
-.shape-1 button{
+@media (max-width: 1250px) {
+    .shape-1 input{
+        width: 80%;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.butt{
     width: 310px;
-    height: 61px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
     background-color: #5dbdfe;
-    margin-top: 10px;
-    margin-left: 30px;
-    padding: 0px;
-}
-
-.shape-1 p{
+    overflow: hidden;
     position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5% 0;
+    margin: auto;
+    text-align: center;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
     color: #ffffff;
     font-family: Lato;
     font-size: 20px;
     font-weight: 700;
     line-height: 22px;
-    text-transform: uppercase;
-    text-align: center;
+}
+
+@media (max-width: 1250px) {
+    .butt{
+        width: 80%;
+        padding: 5% 0;
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+}
+
+.pulse {
+    background-color: white;
+    border-radius: 50%;
+    animation: pulse 0.7s ease-out;
+    transform: scale(0);
+    position: absolute;
+   }
+   @keyframes pulse {
+    to {
+     transform: scale(2);
+     background-color: #fff;
+     opacity: 0;
+    }
+   }
+
+   @media (max-width: 1250px) {
+    .pulse{
+        animation: pulse 0.4s ease-out;
+    }
 }
 
 /* _______________________________________________ */
 
-/* Style for "Rectangle 3" */
 
-.Rectangle3{
-    position: relative;
-    width: 1927px;
-    height: 844px;
+
+section.section1{
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-}
+    z-index: 1;
+  }
 
-.Rectangle3 div.box{
-    width: 515px;
-    height: 157px;
+ 
+
+section.section1 div.box{
+    width: 45%;
     display:inline-block;
-    margin-left: 382px;
-    margin-right: -295px;
-    margin-top: 338px;
-    margin-bottom: -272px;
+    margin-top: 5%;
 }
 
-/* Style for "Ellipse 2" */
+@media (max-width: 1250px) {
+    section.section1 div.box{
+        width: 97%;
+        margin-top: 10%;
+    }
+}
 
-.Rectangle3 div.ellipse{
-    position: absolute;
+section.section1 div.ellipse{
     width: 91px;
     height: 90px;
     background-color: #5dbdfe;
     border-radius: 50%;
-}  
-
-/* Style for "Ellipse 2 image" */
-
-.Rectangle3 img{
-    position: absolute;
-    top: 21px;
-    left: 22px;
+    float: left;
 }
 
-/* Style for "About Us" */
-
-.Rectangle3 h1{
-    left: 875px;
-    top: 133px;
+@media (max-width: 1250px) {
+    section.section1 div.ellipse{
+        width: 180px;
+        height: 180px;
+        box-sizing:border-box;
+    }
 }
 
-/* Style for "Exclusive" */
-
-.Rectangle3 h2.Exclusive{
-    width: 230px;
-    margin-left: 120px;
-}
-
-/* Style for "100% valid" */
-
-.Rectangle3 h2.Valid{
-    width: 272px;
-    margin-left: 120px;
-}
-
-/* Style for "Free Lifet" */
-
-.Rectangle3 h2.Free{
-    width: 230px;
-    margin-left: 120px;
-}
-
-/* Style for "24/7/365 C" */
-
-.Rectangle3 h2.Customer{
-    width: 298px;
-    margin-left: 120px;
-}
-
-/* Style for "Lorem ipsum" */
-.Rectangle3 h3{
-    top: 217px;
-    left: 518px;
-}
-
-/* Style for "Malorum dolores" */
-
-.Rectangle3 p{
-    width: 395px;
-    height: 87px;
-    margin-left: 119px;
-    margin-top: 70px;
+section div.ellipse:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 
-.break {
-    flex-basis: 100%;
-    height: 0;
+section.section1 img{
+    position: relative;
+    top: 25%;
 }
 
+@media (max-width: 1250px) {
+    section.section1 img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+section.section1 p{
+    margin-left: 18%;
+    margin-top: 3%;
+    text-align: start;
+}
+
+@media (max-width: 1250px) {
+    section.section1 p{
+        margin-left: 21%;
+    }
+}
+
+section.section1 h2{
+    margin-left: 18%;
+    text-align: start;
+}
+
+@media (max-width: 1250px) {
+    section.section1 h2{
+        margin-left: 21%;
+    }
+}
+section.section1 h3{
+    width: 90%;
+    margin-top: 5%;
+}
 
 /* _______________________________________________ */
 
 /* Style for "Rectangle4" */
 
-.Rectangle4{
-    height: 999px;
-    width: 1920px;
+section.section2{
     background-color: #f1f1f1;
 }
 
-/* Style for "Features" */
-
-.Rectangle4 h1.Features{
-    margin-left: 883px;
-    margin-top: 134px;
+section.section2 div.box{
+    width: 50%;
+    margin-top: 5%;
+}
+@media (max-width: 1250px) {
+    section.section2 div.box{
+        width: 100%;
+      }
 }
 
-/* Style for "Lorem ipsum" */
-
-.Rectangle4 h3{
-    margin-top: 216px;
-    margin-left: 518px;
+section.section2 div.box2{
+    width: 45%;
+    float: right;
+    height: 100%;
+    margin-top: 5%;
+}
+@media (max-width: 1250px) {
+    section.section2 div.box2{
+        display: none;
+}
 }
 
-/* Styles for "Switch styles" */
-
-.Rectangle4 p.text1{
-    width: 409px;
-    height: 87px;
-    margin-left: 477px;
-    margin-top: 408px;
-
-}
-
-/* Style for "Various Scripts" */
-
-.Rectangle4 p.text2{
-    width: 370px;
-    height: 53px;
-    margin-left: 476px;
-    margin-top: 631px;
-
-}
-
-/* Style for "Product is" */
-
-.Rectangle4 p.text3{
-    width: 409px;
-    height: 53px;
-    margin-left: 476px;
-    margin-top: 820px;
-
-}
-
-
-/* Style for "Layer 83" */
-
-.Layer83{
+section.section2 div.Layer83{
     position: absolute;
     width: 285px;
     height: 487px;
     background-color: #f34235;
-    margin-left: 977px;
-    margin-top: 348px;
+    z-index: 0;
+    float:left;
 }
 
-
-/* Style for "Layer 82" */
-
-.Layer82{
-    position: absolute;
+section.section2 div.Layer82{
+    position: relative;
     width: 570px;
     height: 487px;
     background-color: #5dbdfe;
-    margin-left: 977px;
-    margin-top: 348px;
+    z-index: 1;
+}
+
+section.section2 div.img_man{
+    position: relative;
+    z-index: 2;
+    content:url(../images/man.png);
+    margin: auto;
+    text-align: center;
+    box-sizing:border-box;
+    bottom: 90px;
 }
 
 
-/* Style for "Depositpho" */
+section.section2 h2{
+    position: relative;
+    left: 15%;
+    margin-top: 3%;
+}
 
-.Depositpho{
+@media (max-width: 1250px) {
+    section.section2 h2{
+        left: 5%;
+    }
+}
+
+section.section2 p{
+    left: 15%;
+    margin-top: 5%;
+}
+@media (max-width: 1250px) {
+    section.section2 p{
+        left: 5%;
+    }
+}
+
+section.section2 div.box_image{
+    margin-right: 5%;
+    text-align: start;
+}
+
+@media (max-width: 1250px) {
+    section.section2 div.logo{
+        text-align: center;
+        margin: auto;
+    }
+}
+
+section.section2 img{
     position: absolute;
-    width: 414px;
-    height: 673px;
-    background-image: url(../images/man.png);
-    margin-left: 1055px;
-    margin-top: 326px;
 }
 
-/* Styles for "Images" */
-
-.Rectangle4 img{
-position: absolute;
-}
-
-.Rectangle4 img.logo1{
-    margin-left: 386px;
-    margin-top: 342px;
-}
-
-.Rectangle4 img.logo2{
-    margin-left: 380px;
-    margin-top: 565px;
-}
-
-.Rectangle4 img.logo3{
-    margin-left: 377px;
-    margin-top: 757px;
-}
-
-/* Styles for "Headings" */
-
-.Rectangle4 h2.Instant{
-    margin-top: 349px;
-    margin-left: 478px;
-}
-
-.Rectangle4 h2.Various{
-    margin-top: 575px;
-    margin-left: 476px;
-}
-
-.Rectangle4 h2.Fully{
-    margin-top: 764px;
-    margin-left: 476px;
+@media (max-width: 1250px) {
+    section.section2 img{
+        width: 150px;
+        position: relative;
+        margin: 5% 0;
+    }
 }
 
 /* _______________________________________________ */
 
 
-/* Style for "Rectangle 6" */
 
-.Rectangle6{
-    position: relative;
-    width: 1920px;
-    height: 1064px;
+section.section3{
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
     background-color: #f34235;
+    z-index: 1;
     }
 
-/* Style for "Advantages" */
-
-.Rectangle6 h1{
-    width: 231px;
-    height: 43px;
-    margin-left: 846px;
-    margin-top: 129px;
+section.section3 h1{
     color: #ffffff;
 }
 
-/* Style for "Lorem ipsum" */
-
-.Rectangle6 h3{
-    margin-left: 514px;
-    margin-top: 217px;
+section.section3 h3{
     color: #ffffff;
-    text-align: center;
+    margin-bottom: 5%;
 }
 
-.Rectangle6 div.box1{
+section.section3 div.box{
     width: 239px;
-    height: 268px;
     display:inline-block;
-    margin-left: 393px;
-    margin-right: -334px;
-    margin-top: 338px;
-    margin-bottom: -273px;
 }
 
-/* Style for "layer 5" */
+@media (max-width: 1250px) {
+    section.section3 div.box{
+        width: 90%;
+    }
+}
 
-.Rectangle6 div.ellipse{
-    position: absolute;
+
+
+section.section3 div.ellipse{
     width: 90px;
     height: 90px;
-    margin: 0px;
-    margin-left: 74px;
     background-color:#ffffff;
     border-radius: 50%;
+    text-align: center;
+    margin: 8% auto;
+}
+
+@media (max-width: 1250px) {
+    section.section3 div.ellipse{
+        width: 200px;
+        height: 200px;
+    }
 }
 
 
-/* Styles for "Headings" */
 
-.Rectangle6 h2{
+section.section3 h2{
     color: #ffffff;
     line-height: 30px;
-    margin-top: 122px;
 }
 
-.Rectangle6 h2.text1{
-    width: 203px;
-    margin-left: 13px;  
+@media (max-width: 1250px) {
+    section.section3 h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
 }
 
-.Rectangle6 h2.text2{
-    width: 223px;
-    margin-left: 5px;  
-}
 
-.Rectangle6 h2.text3{
-    width: 179px;
-    margin-left: 26px;  
-}
-
-.Rectangle6 h2.text4{
-    width: 145px;
-    margin-left: 47px;  
-}
-
-/* Style for "Text" */
-
-.Rectangle6 p{
-    width: 239px;
-    height: 87px;
+section.section3 p{
     color: #ffffff;
-    margin-top: 181px;
-    text-align: center;
+    margin-top: 5%;
 }
 
-/* Styles for "Numbers" */
+@media (max-width: 1250px) {
+    section.section3 p{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
 
-.Rectangle6 p.text{
-    width: 32px;
-    height: 34px;
+
+section.section3 p.text{
     color: #f34235;
     font-size: 45px;
     font-weight: 700;
     line-height: 24px;
-    margin-left: 33px;
-    margin-top: 29px;
+    top: 30%;
 }
 
+@media (max-width: 1250px) {
+    section.section3 p.text{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
 
 /* _______________________________________________ */
 
-/* Styles for "Rectangle5" */
 
-.Rectangle5{
-    height: 728px;
-    width: 1920px;
+section.section4{
     background-color: #f1f1f1;
 }
 
-/* Style for "Testimonia" */
-
-.Rectangle5 h1.Testomnia{
-    width: 249px;
-    height: 35px;
-    margin-left: 837px;
-    margin-top: 133px;
-}
-
-/* Style for "Quotes" */
-
-.Rectangle5  div.logo8{
-    position: absolute;
-    width: 51px;
-    height: 60px;
-    background-image: url(../images/logo8.png);
-    margin-left: 935px;
-    margin-top: 240px;
-}
-
-/* Style for "Vis quaeque" */
-
-.Rectangle5  p.text.vis{
-    width: 701px;
-    height: 53px;
-    margin-top: 327px;
-    margin-left: 611px;
+section.section4 div.contaier{
     text-align: center;
 }
 
-
-/* Style for "Page-1_img" */
-
-.Rectangle5  div.img1{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-image: url(../images/img06.png);
-    margin-top: 428px;
-    margin-left: 922px;
+section.section4  div.logo8{
+    width: 51px;
+    height: 60px;
+    margin:45px auto;
 }
 
-/* Style for "Rob Singer" */
+@media (max-width: 1250px) {
+    section.section4  div.logo8{
+        width: 100px;
+        height: 100px;
+    }
+}
 
-.Rectangle5  p.rob-singer{
-    width: 287px;
-    height: 23px;
+section.section4  img{
+    width: 100%;
+}
+
+section.section4  .text.vis{
+    width: 50%;
+    left: 25%;
+}
+
+@media (max-width: 1250px) {
+    section.section4  .text.vis{
+        width: 97%;
+        left: 0%;
+    }
+}
+
+section.section4  div.img1{
+    margin: 45px auto;
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 1250px) {
+    section.section4  div.img1{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+
+section.section4 p.rob-singer{
     color: #5dbdfe;
     font-size: 24px;
     line-height: 30px;
-    margin-top: 540px;
-    margin-left: 820px;
 }
 
 
-/* Styles for "Ellipse 6" */
-
-.Rectangle5  div.point{
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    background-color: #333333;
+section.section4  span.point{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
     border-radius: 50%;
-    margin-top: 586px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
-.Rectangle5  div.point.black{
-    background-color: #333333;
-    margin-left: 949px;
+
+@media (max-width: 1250px) {
+    section.section4  span.point{
+        width: 20px;
+        height: 20px;
+    }
 }
-.Rectangle5  div.point.white{
-    background-color: #cccccc;
-    margin-left: 967px;
+
+.active,
+section.section4  span.point:hover {
+    background-color: #aaa;
 }
+
+/*__________________________________________*/
+
+
+
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.slider .prev{
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    top: 250px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+@media (max-width: 1250px) {
+    section.section4 .slider .prev{
+        font-size: 150px;
+    }
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    position: absolute;
+    cursor: pointer;
+    top: 250px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+}
+
+@media (max-width: 1250px) {
+    section.section4 .slider .next{
+        font-size: 150px;
+    }
+}
+
+/* Заголовок слайда */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
 
 
 /* __________________________________________ */
 
 
-/* Style for "Rectangle 7" */
-
-.Rectangle7{
-    position: relative;
-    width: 1984px;
-    height: 763px;
+section.section5{
     background-color: #ffffff;
-    padding-right: 335px;
 }
-.Rectangle7 div.box{
+
+
+section.section5 div.box{
     width: 239px;
-    height: 396px;
     display: inline-block;
-    margin-left: 418px;
-    margin-top: 240px;
-    margin-right: -357px;
+    margin: 0 2%;
+}
+@media (max-width: 1250px) {
+    section.section5 div.box{
+        width: 90%;
+      }
 }
 
-
-/* Style for "Layer 99" */
-
-.Rectangle7 img{
-    position: absolute;
-    margin-left: 19px;
+section.section5 img{
+    box-sizing:border-box;
+    margin-top: 40%;
+    margin-bottom: 10%;
 }
 
-/* Style for "Texts" */
-
-.Rectangle7 p{
-    width: 239px;
-    height: 87px;
-    margin-top: 309px;
-    text-align: center;
+@media (max-width: 1250px) {
+    section.section5 img{
+        width: 40%;
+        margin-top: 15%;
+      }
 }
 
-/* Style for "Employee's position" */
-
-.Rectangle7 p.blue{
+section.section5 p.blue{
     opacity: 1;
     color: #5dbdfe;
     font-size: 16px;
-    margin-top: 274px;
 }
 
-/* Style for "Names" */
-
-.Rectangle7 h2{
-    line-height: 46px;
-    margin-top: 233px;
-    text-align: center;
-    margin-left:2%;
+@media (max-width: 1250px) {
+    section.section5 p.blue{
+        font-size: 3rem;
+        line-height: 3rem;
+      }
 }
 
-/* Style for "Our Team" */
-
-.Rectangle7 h1{
-    margin-left: 890px;
-    margin-top: 133px;
+@media (max-width: 1250px) {
+    section.section5 p{
+        font-size: 2rem;
+        line-height: 2rem;
+      }
 }
 
+@media (max-width: 1250px) {
+    section.section5 h2{
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+}
 
 /* ____________________________________________ */
 
-/* Style for "Layer104" */
 
-.Layer104{
-    position: relative;
-    width: 1920px;
-    height: 761px;
+section.section6{
     background-image:url(../images/image2.png);
+    height: 760px;
+    padding-bottom: 0;
   }
 
-  .Layer104 div.box{
-      display: inline-block;
-      min-height: 288px;
-      max-height: 663px;
-      width: 370px;
-      vertical-align: top;
-      margin-left: 377px;
-      margin-right: -347px;
-      overflow: hidden;
-      margin-top: 240px;
+  @media (max-width: 1250px) {
+    section.section6{
+        height: 1870px;
+        padding-bottom: 120px;
+      }
+}
 
+  section.section6 div.fag{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    @media (max-width: 1250px) {
+        section.section6 div.fag{
+            width: 90%;
+            display: inline-block;
+          }
+    }
+
+   
+
+    section.section6 ul {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-width: 360px;
   }
 
   
 /* Style for "Layer 13" */
 
-  .Layer104 div.Layer13{
-    position: relative;
-    display: list-item;
-    width: 370px;
+section.section6 li {
+    margin: 15px 0;
+    min-width: 80%;
     min-height: 76px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
     background-color: #ff4538;
     overflow: hidden;
-    margin-bottom: 30px;
+    cursor: pointer;
   }
+  @media (max-width: 1250px) {
+    section.section6 li{
+        min-height: 152px;
+      }
+}
 
-  /* Style for "FAQs" */
-
-  .Layer104 h1{
-    margin-top: 133px;
-    margin-left: 910px;
-  }
-
-/* Styles for "Headings" */
-
-  .Layer104 h2{
-    position: relative;
+section.section6 h2{
     color: #ffffff;
-    margin-left: 20px;
-    margin-top: 12px;
+    margin-top: 4%;
   }
 
-/* Styles for "Texts" */
+  @media (max-width: 1250px) {
+    section.section6 h2{
+        font-size: 4rem;
+        line-height: 6rem;
+      }
+}
 
-  .Layer104 p{
-    position: relative;
+
+section.section6 p{
     color: #ffffff;
-    margin-left: 20px;
-    margin-bottom: 22px;
-    margin-top: 33px;
+    transform: translate(0,-700px);
+    transition: .5s ease all !important;
   }
 
-  /* Style for "Ellipse 5" */
+  @media (max-width: 1250px) {
+    section.section6 p{
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+}
 
-  .Layer104 div.Ellipse{
-    position: relative;
+
+section.section6 div.Ellipse{
+    display: flex;
     width: 30px;
     height: 30px;
     background-color: #ffffff;
     border-radius: 50%;
     float: right;
-    margin-top: 22px;
-    margin-right: 20px;
+    margin-top: 6%;
+    margin-right: 5%;
   }
 
-/* Style for "Ico in ellipse 5" */
+  @media (max-width: 1250px) {
+    section.section6 div.Ellipse{
+        width: 60px;
+        height: 60px;
+      }
+}
 
-  .Layer104 p.ico{
-    color: #dc3c30;
-    font-family: "Material Icons";
-    font-size: 24px;
-    line-height: 31px;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0px;
-  }
+
+.myImage{
+    margin: auto;
+    content: url('../images/1.png');
+}
+
+@media (max-width: 1250px) {
+    section.section6 .myImage{
+        transform: scale(2);
+      }
+}
 
 /* ____________________________________________ */
 
-/* Style for "Rectangle 8" */
 
-.Rectangle8 {
-    position: relative;
-    width: 1920px;
-    height: 584px;
+section.section7 {
     background-color: #ffffff;
 }
 
-/* Style for "Layer 105" */
+section.section7 div.container {
+    padding: 0;
+}
 
-.Layer105{
-    position: absolute;
+section.section7 iframe{
     width: 570px;
     height: 340px;
-    background-image: url(../images/Layer_105.png);
-    margin-left: 377px;
-    margin-top: 118px;
 }
 
-/* Style for "How Its Work" */
-
-.Rectangle8 h1{
-    margin-top: 131px;
-    margin-left: 978px;
+@media (max-width: 1250px) {
+    section.section7 iframe{
+        width: 950px;
+        height: 680px;
+    }
 }
 
-/* Style for "Text" */
+section.section7 div.container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+@media (max-width: 1250px) {
+    section.section7 div.container{
+        flex-direction: column;
+    }
+}
+section.section7 div.box{
+    width: 49%;
+    display: inline-block;
+}
 
-.Rectangle8 p{
+@media (max-width: 1250px) {
+    section.section7 div.box{
+        width: 100%;
+    }
+}
+
+section.section7 h1{
+    text-align: start;
+}
+@media (max-width: 1250px) {
+    section.section7 h1{
+        text-align: center;
+        margin-top: 5%;
+    }
+}
+
+section.section7 p{
+    text-align: start;
     width: 559px;
-    height: 155px;
-    margin-left: 977px;
-    margin-top: 299px;
+    margin: 5% 0;
+}
+@media (max-width: 1250px) {
+    section.section7 p{
+        width: 99%;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
-/* Style for "Lorem ipsum" */
-
-.Rectangle8 p.blue{
+section.section7 p.blue{
     color: #5dbdfe;
     font-weight: 700;
     opacity: 1;
-    margin-left: 978px;
-    margin-top: 216px;
-    width: 504px;
 }
 
 /* ____________________________________________ */
 
 /* Style for "Rectangle10" */
-
-.Rectangle10{
-    position: relative;
-    width: 1920px;
-    min-height: 360px;
+section.section8{
+    padding: 0;
 }
+
+section.section8 img{
+    width: 25%;
+}
+@media (max-width: 1250px) {
+    section.section8 img{
+        width: 100%;
+    }
+}
+section.section8 img:hover {
+    cursor: pointer;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -o-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);  
+    transform: translateY(-20px);
+   }
 
 
 /* ____________________________________________ */
 
-/* Style for "Rectangle9" */
 
-.Rectangle9{
-    height: 809px;
-    width: 1920px;
+section.section9{
     background-color: #f1f1f1;
 }
 
-/* Style for "Latest From" */
-
-.Rectangle9 h1.Latest{
-    margin-left: 761px;
-    margin-top: 129px;
+section.section9 div.container{
+    padding: 0;
 }
 
-/* Style for "Lorem ipsum" */
-
-.Rectangle9 p.text4{
-    width: 898px;
-    height: 54px;
-    font-weight: 700;
-    margin-top: 217px;
-    margin-left: 514px;
-    text-align: center;
-}
-
-
-/* Style for "Photos" */
-
-.Rectangle9 div.photo{
-    position: absolute;
+section.section9 div.photo{
+    display: inline-block;
+    z-index: 0;
+    background-image:url(../images/Layer_110.png);
+    background-size:cover;
+    overflow: hidden;
+    border-radius:5px;
     width: 570px;
-    height: 351px;
-    margin-top: 338px;
-    margin-left: 377px;
+    height: 350px;
+    margin: 60px 10px;
+}
+@media (max-width: 1250px) {
+    section.section9 div.photo{
+        width: 900px;
+        height: 500px;
+    }
 }
 
-.photo h2 {
+section.section9 h2 {
     color: #ffffff;
-    margin-left: 34px;
-    margin-top: 299px;
-    z-index: 1;
+    z-index: 2;
+    width: auto;
+    margin: 0;
+    transform: translate(10px,500px);
 }
 
-.photo p{
+@media (max-width: 1250px) {
+    section.section9 h2{
+        font-size: 3rem;
+    }
+}
+
+section.section9 div.photo:hover h2{
+    transform: translate(10px,280px);
+    transition: .5s ease all !important;
+}
+
+@media (max-width: 1250px) {
+    section.section9 div.photo:hover h2{
+        transform: translate(30px,400px);
+    }
+}
+
+section.section9 p{
     color: #cfcfcf;
     font-family: "Lato - Black";
     font-size: 16px;
-    margin-top: 274px;
-    margin-left: 34px;
-    z-index: 1;
+    z-index: 2;
+    transform: translate(30px,360px);
+    text-align: start;
 }
 
-.photo div.box{
-    position: absolute;
+@media (max-width: 1250px) {
+    section.section9 p{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    section.section9 p{
+        transform: translate(30px,500px);
+    }
+}
+
+section.section9 div.photo:hover p{
+    transform: translate(30px,200px);
+    transition: .5s ease all !important;
+}
+
+@media (max-width: 1250px) {
+    section.section9 div.photo:hover p{
+        transform: translate(30px,300px);
+    }
+}
+
+section.section9 div.box{
     width: 570px;
-    height: 351px;
+    height: 350px;
     background-image: linear-gradient(to top, rgba(51, 51, 51, 0.6) 0%, rgba(51, 51, 51, 0) 56%, rgba(51, 51, 51, 0) 100%);
     z-index: 1;
+    opacity: 0;
 }
 
-.Rectangle9 div.photo2{
-    position: absolute;
-    width: 570px;
-    height: 351px;
-    margin-top: 338px;
-    margin-left: 977px; 
+@media (max-width: 1250px) {
+    section.section9 div.box{
+        width: 900px;
+        height: 500px;
+    }
+}
+
+section.section9 div.photo:hover div.box{
+    opacity: 1;
+    transition: .5s ease all !important;
 }
 
 
-/* Style for "Ellipse 7" */
-
-.Rectangle9 div.Ellipse2{
-    position: absolute;
+section.section9 div.Ellipse2{
     width: 46px;
     height: 46px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
     background-color: #5dbdfe;
     border-radius: 50%;
-    margin-left: 496px;
-    margin-top: 25px;
     z-index: 1;
+    transform: translate(490px,-400px);
 }
-.Ellipse2 img{
-    margin-left: 14px;
-    margin-top: 14px;
+
+section.section9 div.photo:hover div.Ellipse2{
+    transform: translate(490px,-50px);
+    transition: .5s ease all !important;
+}
+
+@media (max-width: 1250px) {
+    section.section9 div.Ellipse2{
+        width: 90px;
+        height: 90px;
+        transform: translate(760px,-400px);
+    }
+}
+
+@media (max-width: 1250px) {
+    section.section9 div.photo:hover div.Ellipse2{
+        transform: translate(760px,-50px);
+    }
+}
+
+section.section9 img{
     z-index: 0;
+    margin-top: 25%;
+}
+
+@media (max-width: 1250px) {
+    section.section9 img{
+        width: 40%;
+        height: 40%;
+    }
 }
 
 /* ____________________________________________ */
 
 /* Style for "Rectangle11" */
 
-.Rectangle11{
-    position: relative;
-    width: 1922px;
-    height: 443px;
+section.section10{
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 
-/* Style for "Our partners" */
 
-.Rectangle11 h1{
-    margin-top: 131px;
-    margin-left: 836px;
-}
-
-.Rectangle11 div.box{
-    position: absolute;
+section.section10 div.box{
     width: 1000px;
-    height: 84px;
-    margin-left: 491px;
-    margin-top: 247px;
+    text-align: center;
+    margin: 60px auto;
+    overflow: hidden;
 }
 
 /* Style for "Layer 108" */
 
-.Rectangle11 img{
-    position: relative;
+section.section10 img{
     display: inline-block;
     vertical-align: top;
     margin-right: 39px;
+    transform: translate(180px,0);
 }
 
 
@@ -950,58 +1296,40 @@ position: absolute;
 
 /* Style for "Shape 5" */
 
-.Shape5{
-    position: relative;
-    width: 1925px;
-    height: 635px;
+section.footer{
     background-color: rgba(43, 43, 43, 0.83);
     background-color: #323232;
+    padding-top: 120px;
 }
 
 /* Style for "Contact us" */
 
-.Shape5 h1{
-    margin-top: 135px;
-    margin-left: 862px;
+section.footer h1{
     color: #ffffff;
-    text-align: center;
+    margin-bottom: 100px;
 }
 
-/* Styles for "8901 Marmo" */
-
-.Shape5 div.inf{
-    position: absolute;
-    width: 475px;
-    height: 54px;
-    margin-left: 725px;
-    margin-top: 248px;
-}
-.Shape5 h2{
-    position: relative;
+section.footer h2{
     font-family: "Lato - Bold";
     color: #ffffff;
-    text-align: center;
 }
 
-.Shape5 h2.bold{
+section.footer h2.bold{
     font-weight: 700;
 }
 
-.Shape5 h2.reg{
+section.footer h2.reg{
     font-weight: 400;
 }
 
 /* Styles for "Ellipses" */
 
-.Shape5 div.ico{
-    position: absolute;
-    width: 200px;
-    height: 51px;
-    margin-left: 875px;
-    margin-top: 368px;
+section.footer div.ico{
+    width: 100%;
+    margin: 100px auto;
 }
 
-.ico div{
+section.footer div.ico div{
     width: 51px;
     height: 50px;
     border-radius: 50%;
@@ -1010,67 +1338,61 @@ position: absolute;
     vertical-align: top;
 }
 
-.ico div.ellipse1{
+section.footer div.ellipse1{
     background-color: #3b579d;
 }
 
-.ico div.ellipse2{
+section.footer div.ellipse2{
     background-color: #5ea9dd;
 }
 
-.ico div.ellipse3{
+section.footer div.ellipse3{
     background-color: #df4a32;
 }
 
 /* Style for "Ellipse 8" */
 
-.Shape5 div.ellipse4{
-    position: absolute;
+section.footer div.ellipse4{
     width: 51px;
     height: 51px;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
     background-color: #5dbdfe;
     border-radius: 50%;
-    margin-left: 1825px;
-    margin-top: 367px;
+    position: fixed;
 }
 
-.ellipse4 img{
-    margin-left: 15px;
-    margin-top: 20px;
+section.footer div.ellipse4 img{
+        text-align: center;
+        margin-top: 30%;
 }
 
-.ico img{
-    position: relative;
+section.footer div.ico img{
     margin-top: 30%;
-    margin-left: 30%;
+    text-align: center;
 }
 
 /* Style for "Colorful" */
 
-.Shape5 h3{
+section.footer h3{
     opacity: 0.1;
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     margin: 0px;
-    margin-left: 840px;
-    margin-top: 489px;
-    width: 249px;
-    height: 13px;
+    text-align: center;
 }
 
 /* ____________________________________________ */
 
-
+section.footer{
+    padding: 0;
+}
 /* Style for "Layer 109" */
 
-.Layer109{
-    position: relative;
-    width: 1920px;
-    height: 440px;
-    background-image: url(../images/Layer_109.png);
-}
+/* section.footer iframe{
+    width: 100%;
+
+} */
 
 /* Style for "Ico" */
 
@@ -1078,4 +1400,9 @@ position: absolute;
 .Layer109 img{
     margin-left: 966px;
     margin-top: 172px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
 }
