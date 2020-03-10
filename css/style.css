@@ -97,7 +97,7 @@ div.container{
     text-align: center;
 }
 
-.page{
+div.page{
     width: 100%;
     height: 100%;
     top: 0;
@@ -109,7 +109,39 @@ div.container{
     background:inherit;
 }
 
-/* Style for "Header" */
+/* Styles for Back to top button */
+
+div.back_button{
+    position: fixed;
+    cursor: pointer;
+    z-index: 9;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+    -webkit-border-radius: 35px;
+    border-radius: 35px;
+    background:
+    rgba(93,189,254,.7);
+}
+
+@media (max-width: 1250px) {
+    div.back_button{
+        width: 140px;
+        height: 140px;
+    }
+}
+
+.back_button img{
+    width: 50%;
+    height: 20%;
+    margin-top: 35%;
+    margin-left: 25%;
+}
+
+/* Style for Header */
 
 section.header{
     background-image:url(../images/6.jpg);
@@ -117,7 +149,7 @@ section.header{
     min-height: 100vh;
   }
 
-/* Style for "Colorful Flat" */
+/* Style for Headline 1 */
 
  section.header h2{
     color: #ffffff;
@@ -129,133 +161,134 @@ section.header{
     text-align: center;
 }
 
+/* Styles for Menu */
 
-.wrapper{
-    width: 80px;
-    position: fixed;
-    color: white;
-    text-align: center;
-    height: 60px;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
-    top: 0;
-    left: 0;
-    z-index: 99;
+.nav input {
+    display: none;
 }
+.nav label {
+    cursor: pointer;
+}
+
+.nav {
+    user-select: none;
+    position:fixed;
+    background-color:#DCDCDC;
+    border-radius:25%;
+    z-index:9;
+}
+
+.nav__showmenu {
+    position: relative;
+    z-index: 3;
+    padding: 0px 15px;
+    font-size: 55px;
+}
+
 @media (max-width: 1250px) {
-    .wrapper{
-        width: 130px;
-        height: 110px;
+    .nav__showmenu {
+        padding: 0px 20px;
+        font-size: 8rem;
     }
 }
 
-#check-menu{
-    display: none;
-}
-
-.menu-icon{
-    display: block;
-    position: absolute;
+.nav__back {
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.burger-line{
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    width: 100%;
-    height: 10%;
-    background-color:#fff;
-    transition: .3s all;
-}
-
-.second, .third{
-    top: 50%;
-}
-
-.fourth{
-    top: 80%;
-}
-
-.main-menu{
-    display: block;
-    position: absolute;
-    width: 760%;
+    right: 0;  
     bottom: 0;
     left: 0;
-    transform: translateY(100%);
-    max-height: 0;
-    font-size: 0;
+    transition: background-color .3s;
+}
+
+.menu, .menu__submenu{
+    list-style: none;
+    padding: 0;
+    color: #fff;
     overflow: hidden;
-    transition: .5s all;
-    border-radius:2%;
-}
+  }
 
-@media (max-width: 1250px) {
-    .main-menu{
-        transition: 0s all;
-    }
-}
-
-a.menu-item{
+.menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     display: block;
-    width: 98%;
-    text-decoration: none;
-    font-family: Lato;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 3rem;
-    background-color:white;
-    color:black;
-    opacity: 0.85;
-    border: 1px solid rgba(255,255,255,.3);
+    width: 25%;
+    opacity: 0.8;
+    margin: 0;
+    padding: 17px 0;
+    text-transform: uppercase;
+    line-height: 2em;
+    background-color: #2c2c2c;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 @media (max-width: 1250px) {
-    a.menu-item{
+    .menu{
+        width: 100%;
+    }
+}
+
+.menu__submenu {
+    font-size: .8em;
+    background-color: #ddd;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+}
+
+.menu__showsub {
+    position: absolute;
+    right: 0;
+    margin-top: -55px;
+    padding: 10px;
+    line-height: normal;
+    font-size: 24px;
+}
+@media (max-width: 1250px) {
+    .menu__showsub{
         font-size: 4rem;
-        line-height: 7rem;
+        margin-top: -110px;
     }
 }
 
-a:hover{
-    background-color: rgba(0,0,0,.9);
-    color: grey;
-    transition: 0.5s;
-}
-
-#check-menu:checked ~ .main-menu{
-    max-height: 85vh;
+.menu__item {  
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 4rem;
 }
 
 @media (max-width: 1250px) {
-    #check-menu:checked ~ .main-menu{
-        overflow-y: scroll;
+    .menu__item{
+        font-size: 4rem;
+        line-height: 8rem;
     }
 }
 
-#check-menu:checked ~ .first{
-    display: none;
+.menu__submenu .menu__item {color: #000;}
+
+.nav__check:checked~.nav__back {
+    background-color: rgba(0,0,0,.2);
+    bottom: 0;
 }
 
-#check-menu:checked ~ .second{
-    transform: rotate(45deg);
-}
+.menu__item:hover,.nav__showmenu:hover,.menu__showsub:hover {opacity: 0.7;}
+.menu::-webkit-scrollbar {display: none;}
+.nav__check:checked+.nav__showmenu {color:#fff;}
+.menu__check:checked~.menu__submenu {max-height: 100vh;}
+.menu__check:checked+.menu__showsub {transform: rotate(180deg);}
+.nav__check:checked~.menu {transform: translateX(0);}
 
-#check-menu:checked ~ .third{
-    transform: rotate(-45deg);
-}
+/* Style for Header text */
 
-#check-menu:checked ~ .fourth{
-    display: none;
-}
-
-
-p.header{
+section.header p.header{
     width: 100%;
     color: #ffffff;
     text-align: center;
@@ -263,9 +296,9 @@ p.header{
     font-size: 34px;
 }
 
- /* Style for "Web Proffesionals" */
+ /* Style for "Headline 2" */
 
-p.web-proffe{
+ section.header p.web-proffe{
     width: 100%;
     color: #ffffff;
     font-size: 112px;
@@ -276,7 +309,7 @@ p.web-proffe{
 }
 
 /* Style for "Shape 1" */
-.shape-1{
+section.header div.reg-block{
     position: relative;
     width: 370px;
     box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.3);
@@ -288,12 +321,14 @@ p.web-proffe{
     top: 21vh;
 }
 @media (max-width: 1250px) {
-    .shape-1{
+    section.header div.reg-block{
         width:80%;
     }
 }
+
+/* Styles for "Registration block" */
  
-.shape-1 input{
+section.header div.reg-block input{
     width: 310px;
     border: 1px solid #cccccc;
     opacity: 0.8;
@@ -307,14 +342,14 @@ p.web-proffe{
 }
 
 @media (max-width: 1250px) {
-    .shape-1 input{
+    section.header div.reg-block input{
         width: 80%;
         font-size: 3rem;
         line-height: 3rem;
     }
 }
 
-.butt{
+section.header div.reg-block button.butt{
     width: 310px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
     background-color: #5dbdfe;
@@ -334,13 +369,15 @@ p.web-proffe{
 }
 
 @media (max-width: 1250px) {
-    .butt{
+    section.header div.reg-block button.butt{
         width: 80%;
         padding: 5% 0;
         line-height: 3rem;
         font-size: 3rem;
     }
 }
+
+/* Styles for "Click action" */
 
 .pulse {
     background-color: white;
@@ -363,9 +400,7 @@ p.web-proffe{
     }
 }
 
-/* _______________________________________________ */
-
-
+/* Styles for "Section 1" */
 
 section.section1{
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
@@ -373,7 +408,6 @@ section.section1{
     z-index: 1;
   }
 
- 
 
 section.section1 div.box{
     width: 45%;
@@ -450,9 +484,9 @@ section.section1 h3{
     margin-top: 5%;
 }
 
-/* _______________________________________________ */
 
-/* Style for "Rectangle4" */
+
+/* Styles for "Section 2" */
 
 section.section2{
     background-color: #f1f1f1;
@@ -480,7 +514,7 @@ section.section2 div.box2{
 }
 }
 
-section.section2 div.Layer83{
+section.section2 div.red_div{
     position: absolute;
     width: 285px;
     height: 487px;
@@ -489,7 +523,7 @@ section.section2 div.Layer83{
     float:left;
 }
 
-section.section2 div.Layer82{
+section.section2 div.blue_div{
     position: relative;
     width: 570px;
     height: 487px;
@@ -554,8 +588,6 @@ section.section2 img{
     }
 }
 
-/* _______________________________________________ */
-
 
 
 section.section3{
@@ -602,8 +634,6 @@ section.section3 div.ellipse{
     }
 }
 
-
-
 section.section3 h2{
     color: #ffffff;
     line-height: 30px;
@@ -630,7 +660,7 @@ section.section3 p{
 }
 
 
-section.section3 p.text{
+section.section3 p.num{
     color: #f34235;
     font-size: 45px;
     font-weight: 700;
@@ -639,14 +669,11 @@ section.section3 p.text{
 }
 
 @media (max-width: 1250px) {
-    section.section3 p.text{
+    section.section3 p.num{
         font-size: 5rem;
         line-height: 5rem;
     }
 }
-
-/* _______________________________________________ */
-
 
 section.section4{
     background-color: #f1f1f1;
@@ -656,190 +683,56 @@ section.section4 div.contaier{
     text-align: center;
 }
 
-section.section4  div.logo8{
+section.section4  div.logo{
     width: 51px;
     height: 60px;
     margin:45px auto;
 }
 
 @media (max-width: 1250px) {
-    section.section4  div.logo8{
+    section.section4  div.logo{
         width: 100px;
         height: 100px;
     }
 }
 
-section.section4  img{
+section.section4 img{
     width: 100%;
 }
 
-section.section4  .text.vis{
+section.section4  p.text{
     width: 50%;
     left: 25%;
 }
 
 @media (max-width: 1250px) {
-    section.section4  .text.vis{
+    section.section4  p.text{
         width: 97%;
         left: 0%;
     }
 }
 
-section.section4  div.img1{
+section.section4  div.img{
     margin: 45px auto;
     width: 80px;
     height: 80px;
 }
 
 @media (max-width: 1250px) {
-    section.section4  div.img1{
+    section.section4  div.img{
         width: 240px;
         height: 240px;
     }
 }
 
 
-section.section4 p.rob-singer{
+section.section4 p.text_blue{
     color: #5dbdfe;
     font-size: 24px;
     line-height: 30px;
 }
 
 
-section.section4  span.point{
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #ddd;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-@media (max-width: 1250px) {
-    section.section4  span.point{
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.active,
-section.section4  span.point:hover {
-    background-color: #aaa;
-}
-
-/*__________________________________________*/
-
-
-
-/* Собственно сам слайдер */
-.slider{
-    max-width: 90%;
-    position: relative;
-    margin: auto;
-    margin-bottom: 15px;
-}
-
-.slider .item img {
-    object-fit: cover;
-    width: 100%;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.slider .prev{
-    left: 0;
-    position: absolute;
-    cursor: pointer;
-    top: 250px;
-    color: white;
-    font-weight: bold;
-    font-size: 48px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-@media (max-width: 1250px) {
-    section.section4 .slider .prev{
-        font-size: 150px;
-    }
-}
-.slider .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    position: absolute;
-    cursor: pointer;
-    top: 250px;
-    color: white;
-    font-weight: bold;
-    font-size: 48px;
-    transition: 0.6s ease;
-}
-
-@media (max-width: 1250px) {
-    section.section4 .slider .next{
-        font-size: 150px;
-    }
-}
-
-/* Заголовок слайда */
-.slideText {
-    position: absolute;
-    color: #fff;
-    font-size: 35px;
-    /* Выравнивание текста по горизонтали и по вертикали*/
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* Тень*/
-    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
-}
-/* Кружочки */
-.slider-dots {
-    text-align: center;
-}
-.slider-dots_item{
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #ddd;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active,
-.slider-dots_item:hover {
-    background-color: #aaa;
-}
-/* Анимация слайдов */
-.slider .item {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-
-
-/* __________________________________________ */
 
 
 section.section5{
@@ -898,8 +791,6 @@ section.section5 p.blue{
       }
 }
 
-/* ____________________________________________ */
-
 
 section.section6{
     background-image:url(../images/image2.png);
@@ -928,19 +819,15 @@ section.section6{
           }
     }
 
-   
-
-    section.section6 ul {
+    section.section6 ul.accordeon-menu {
       display: flex;
       flex-direction: column;
       overflow: hidden;
       min-width: 360px;
   }
 
-  
-/* Style for "Layer 13" */
 
-section.section6 li {
+section.section6 li.accordeon-item {
     margin: 15px 0;
     min-width: 80%;
     min-height: 76px;
@@ -950,7 +837,7 @@ section.section6 li {
     cursor: pointer;
   }
   @media (max-width: 1250px) {
-    section.section6 li{
+    section.section6 li.accordeon-item{
         min-height: 152px;
       }
 }
@@ -982,7 +869,7 @@ section.section6 p{
 }
 
 
-section.section6 div.Ellipse{
+section.section6 div.ellipse{
     display: flex;
     width: 30px;
     height: 30px;
@@ -994,25 +881,23 @@ section.section6 div.Ellipse{
   }
 
   @media (max-width: 1250px) {
-    section.section6 div.Ellipse{
+    section.section6 div.ellipse{
         width: 60px;
         height: 60px;
       }
 }
 
-
-.myImage{
+section.section6 div.myImage{
     margin: auto;
     content: url('../images/1.png');
 }
 
 @media (max-width: 1250px) {
-    section.section6 .myImage{
+    section.section6 div.myImage{
         transform: scale(2);
       }
 }
 
-/* ____________________________________________ */
 
 
 section.section7 {
@@ -1085,9 +970,7 @@ section.section7 p.blue{
     opacity: 1;
 }
 
-/* ____________________________________________ */
 
-/* Style for "Rectangle10" */
 section.section8{
     padding: 0;
 }
@@ -1112,9 +995,6 @@ section.section8 img:hover {
     -webkit-transform: translateY(-20px);  
     transform: translateY(-20px);
    }
-
-
-/* ____________________________________________ */
 
 
 section.section9{
@@ -1221,7 +1101,7 @@ section.section9 div.photo:hover div.box{
 }
 
 
-section.section9 div.Ellipse2{
+section.section9 div.ellipse{
     width: 46px;
     height: 46px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
@@ -1231,13 +1111,13 @@ section.section9 div.Ellipse2{
     transform: translate(490px,-400px);
 }
 
-section.section9 div.photo:hover div.Ellipse2{
+section.section9 div.photo:hover div.ellipse{
     transform: translate(490px,-50px);
     transition: .5s ease all !important;
 }
 
 @media (max-width: 1250px) {
-    section.section9 div.Ellipse2{
+    section.section9 div.ellipse{
         width: 90px;
         height: 90px;
         transform: translate(760px,-400px);
@@ -1245,7 +1125,7 @@ section.section9 div.photo:hover div.Ellipse2{
 }
 
 @media (max-width: 1250px) {
-    section.section9 div.photo:hover div.Ellipse2{
+    section.section9 div.photo:hover div.ellipse{
         transform: translate(760px,-50px);
     }
 }
@@ -1262,9 +1142,6 @@ section.section9 img{
     }
 }
 
-/* ____________________________________________ */
-
-/* Style for "Rectangle11" */
 
 section.section10{
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
@@ -1273,28 +1150,20 @@ section.section10{
 
 
 section.section10 div.box{
-    width: 1000px;
+    width: 100%;
     text-align: center;
     margin: 60px auto;
     overflow: hidden;
 }
 
-/* Style for "Layer 108" */
 
 section.section10 img{
     display: inline-block;
     vertical-align: top;
-    margin-right: 39px;
-    transform: translate(180px,0);
 }
 
 
 
-/* ____________________________________________ */
-
-
-
-/* Style for "Shape 5" */
 
 section.footer{
     background-color: rgba(43, 43, 43, 0.83);
@@ -1302,7 +1171,6 @@ section.footer{
     padding-top: 120px;
 }
 
-/* Style for "Contact us" */
 
 section.footer h1{
     color: #ffffff;
@@ -1322,7 +1190,6 @@ section.footer h2.reg{
     font-weight: 400;
 }
 
-/* Styles for "Ellipses" */
 
 section.footer div.ico{
     width: 100%;
@@ -1336,6 +1203,10 @@ section.footer div.ico div{
     display: inline-block;
     margin-right: 10px;
     vertical-align: top;
+    cursor: pointer;
+}
+section.footer div.ico div :hover{
+    transform: scale(1.2);
 }
 
 section.footer div.ellipse1{
@@ -1350,28 +1221,11 @@ section.footer div.ellipse3{
     background-color: #df4a32;
 }
 
-/* Style for "Ellipse 8" */
-
-section.footer div.ellipse4{
-    width: 51px;
-    height: 51px;
-    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
-    background-color: #5dbdfe;
-    border-radius: 50%;
-    position: fixed;
-}
-
-section.footer div.ellipse4 img{
-        text-align: center;
-        margin-top: 30%;
-}
-
 section.footer div.ico img{
     margin-top: 30%;
     text-align: center;
 }
 
-/* Style for "Colorful" */
 
 section.footer h3{
     opacity: 0.1;
@@ -1382,27 +1236,13 @@ section.footer h3{
     text-align: center;
 }
 
-/* ____________________________________________ */
 
 section.footer{
     padding: 0;
-}
-/* Style for "Layer 109" */
-
-/* section.footer iframe{
-    width: 100%;
-
-} */
-
-/* Style for "Ico" */
-
-
-.Layer109 img{
-    margin-left: 966px;
-    margin-top: 172px;
+    padding-top: 120px;
 }
 
-#map {
+#map{
     width: 100%;
-    height: 500px;
+    height: 600px;
 }

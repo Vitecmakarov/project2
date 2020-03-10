@@ -4,45 +4,52 @@
 <title>Poject1</title>
 <meta charset="UTF-8" >
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery.min.js"></script>
 <script src="js/accordion.js"></script>	
 <script src="js/carousel.js"></script>
-<!-- <script src="js/menu.js"></script> -->
-<!-- <script src="js/map.js"></script> -->
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script> -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdNu0cigYJ-wNIAzVT0i_TpJ4T8Bf6IvE&callback=initMap"></script> -->
 </head>
+
 <body>
-	<div class="page">
-		<div class="wrapper">
-			<input type="checkbox" id="check-menu">
-			<label for="check-menu" class="menu-icon"></label>
-			<div class="burger-line first"></div>
-			<div class="burger-line second"></div>
-			<div class="burger-line third"></div>
-			<div class="burger-line fourth"></div>
-			<nav class="main-menu">
-				<a class="menu-item" href="#">About us</a>
-				<a class="menu-item" href="#">Features</a>
-				<a class="menu-item" href="#">Advantages</a>
-				<a class="menu-item" href="#">Testimonials</a>
-				<a class="menu-item" href="#">Our team</a>
-				<a class="menu-item" href="#">FAQs</a>
-				<a class="menu-item" href="#">How Its Work</a>
-				<a class="menu-item" href="#">Latest From the Blog</a>
-				<a class="menu-item" href="#">Our partners</a>
-				<a class="menu-item" href="#">Contact us</a>
-			</nav>
+	<div class="page" id="page">
+		<script src="js/swiper.min.js"></script>
+		<script src="js/menu.js"></script>
+		<nav class="nav">
+			<input class="nav__check" type="checkbox" id="showmenu"/>
+			<label class="nav__showmenu" for="showmenu">&#9776;</label>
+			<label class="nav__back" for="showmenu"></label>
+			<ul class="menu" id="menu">
+			<a class="menu__item" href="#sector2">About Us</a>
+				<input class="menu__check" type="checkbox" id="menu2">
+				<label class="menu__showsub" for="menu2">&#9660;</label>
+				<ul class="menu__submenu">
+				  <li><a class="menu__item" href="#">Info</a></li>
+				  <li><a class="menu__item" href="#">Company</a></li>
+				</ul>
+			  </li>
+			  <li><a class="menu__item" href="#sector3">Features</a></li>
+			  <li><a class="menu__item" href="#sector4">Advantages</a></li>
+			  <li><a class="menu__item" href="#sector5">Testimonials</a></li>
+			  <li><a class="menu__item" href="#sector6">Our Team</a></li>
+			  <li><a class="menu__item" href="#sector7">FAQs</a></li>
+			  <li><a class="menu__item" href="#sector8">How Its Work</a></li>
+			  <li><a class="menu__item" href="#sector10">Latest From the Blog</a></li>
+			  <li><a class="menu__item" href="#sector11">Our Partners</a></li>
+			  <li><a class="menu__item" href="#sector12">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<div class="back_button" id="back_button">
+			<img src="images/left.png">
 		</div>
-		<!-- <div class="ellipse4" >
-			<img src="images/left.png" >
-		</div> -->
+
 	<header>
-	<section class="header">
+	<section class="header" id="sector1">
 		<div class="container">
 			<h2>Colorful Flat</h2> 
 			<p class="header">The best open page template  for</p>
 			<p class="web-proffe">Web Proffesionals</p class="web-proffe">
-			<div class="shape-1">
+			<div class="reg-block">
 				<input value="Full name"></input>
 				<input value="E-mail"></input>
 				<input value="Phone"></input>
@@ -53,7 +60,7 @@
 	</section>
 	</header>
 
-	<section class="section1">
+	<section class="section1" id="sector2">
 		<div class="container">
 		<h1>About Us</h1>
 		<h3>Lorem ipsum dolor sit amet, 
@@ -100,15 +107,15 @@
 		</div>
 	</section>
 
-	<section class="section2">
+	<section class="section2" id="sector3">
 		<div class="container">
 			<h1 class="Features">Features</h1>
 			<h3>Lorem ipsum dolor sit amet, cetero temporibus ex nec. Et facilisis definiebas est, 
 				nec et autem impetus oportere, vim te exerci noster omnium. Habeo dicam vim at, sale
 				possit nostrum et pro.</h3>
 			<div class="box2">
-				<div class="Layer82">
-					<div class="Layer83"></div>
+				<div class="blue_div">
+					<div class="red_div"></div>
 					<div class="img_man"></div>
 				</div>
 			</div>
@@ -141,7 +148,7 @@
 		</div>
 	</section>
 
-	<section class="section3">
+	<section class="section3" id="sector4">
 		<div class="container">
 			<h1>Advantages</h1>
 			<h3>Lorem ipsum dolor sit amet, cetero temporibus ex nec. 
@@ -149,7 +156,7 @@
 				exerci noster omnium. Habeo dicam vim at, sale possit nostrum et pro.</h3>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">1.</p>
+					<p class="num">1.</p>
 				</div>
 				<h2>Cu tantas platonem</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -157,7 +164,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">2.</p>
+					<p class="num">2.</p>
 				</div>
 				<h2>Aperiam suscipiantur</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -165,7 +172,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">3.</p>
+					<p class="num">3.</p>
 				</div>
 				<h2>Nusquam facilisis</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -173,7 +180,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">4.</p>
+					<p class="num">4.</p>
 				</div>
 				<h2>Ex vel legimus</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -182,7 +189,7 @@
 			<div class="break"></div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">5.</p>
+					<p class="num">5.</p>
 				</div>
 				<h2>Nusquam facilisis</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -190,7 +197,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">6.</p>
+					<p class="num">6.</p>
 				</div>
 				<h2>Ex vel legimus</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -198,7 +205,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">7.</p>
+					<p class="num">7.</p>
 				</div>
 				<h2>Aperiam suscipiantur</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -206,7 +213,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="text">8.</p>
+					<p class="num">8.</p>
 				</div>
 				<h2>Cu tantas platonem</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -215,65 +222,46 @@
 		</div>
 	</section>
 
-	<section class="section4">
+	<section class="section4" id="sector5">
 		<div class="container">
 			<h1>Testimonials</h1>
-		<div class="slider">
-			<div class="item" style="display: block;">
-				<div class="carousel">
-					<div class="logo8"><img src="images/logo8.png"></div>
-					<p class="text vis">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
-						Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-					<div class="img1"><img src="images/Layer_99.png"></div>
-					<p class="rob-singer">Rob Singer, Web Developer</p>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="logo"><img src="images/logo8.png"></div>
+						<p class="text">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
+							Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
+						<div class="img"><img src="images/Layer_99.png"></div>
+						<p class="text_blue">Alan Sobakovich, Founder</p>
+					</div>
+					<div class="swiper-slide">
+						<div class="logo"><img src="images/logo8.png"></div>
+						<p class="text">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
+							Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
+						<div class="img"><img src="images/Layer_100.png"></div>
+						<p class="text_blue">John Mu, Product Manager</p>
+					</div>
+					<div class="swiper-slide">
+						<div class="logo"><img src="images/logo8.png"></div>
+						<p class="text">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
+							Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
+						<div class="img"><img src="images/Layer_101.png"></div>
+						<p class="text_blue">Melissa Jade, Designer</p>
+					</div>
+					<div class="swiper-slide">
+						<div class="logo"><img src="images/logo8.png"></div>
+						<p class="text">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
+							Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
+						<div class="img"><img src="images/Layer_102.png"></div>
+						<p class="text_blue">Greg Mercury, Developer</p>
+					</div>
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
-		
-			<div class="item" style="display: none;">
-				<div class="carousel">
-					<div class="logo8"><img src="images/logo8.png"></div>
-					<p class="text vis">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
-						Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-					<div class="img1"><img src="images/Layer_100.png"></div>
-					<p class="rob-singer">Rob Singer, Web Developer</p>
-				</div>
-			</div>
-		
-			<div class="item" style="display: none;">
-				<div class="carousel">
-					<div class="logo8"><img src="images/logo8.png"></div>
-					<p class="text vis">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
-						Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-					<div class="img1"><img src="images/Layer_101.png"></div>
-					<p class="rob-singer">Rob Singer, Web Developer</p>
-				</div>
-			</div>
-
-			<div class="item" style="display: none;">
-				<div class="carousel">
-					<div class="logo8"><img src="images/logo8.png"></div>
-					<p class="text vis">Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. 
-						Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-					<div class="img1"><img src="images/Layer_102.png"></div>
-					<p class="rob-singer">Rob Singer, Web Developer</p>
-				</div>
-			</div>
-		
-			<a class="prev" onclick="minusSlide()">&#10094;</a>
-			<a class="next" onclick="plusSlide()">&#10095;</a>
-			  
 		</div>
-		
-		<div class="slider-dots">
-			<span class="slider-dots_item" onclick="currentSlide(1)"></span> 
-			<span class="slider-dots_item" onclick="currentSlide(2)"></span> 
-			<span class="slider-dots_item" onclick="currentSlide(3)"></span>
-			<span class="slider-dots_item" onclick="currentSlide(4)"></span>  
-		</div>
-
 	</section>
 
-	<section class="section5">
+	<section class="section5" id="sector6">
 		<div class="container">
 			<h1>Our Team</h1>
 			<div class="box">
@@ -303,13 +291,13 @@
 	</div>
 	</section>
 
-	<section class="section6">
+	<section class="section6" id="sector7">
 		<div class="container">
 			<h1>FAQs</h1>
 			<div class="fag">
-				<ul>
-					<li class="notactive">
-						<div class="Ellipse">
+				<ul class="accordeon-menu">
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -318,8 +306,8 @@
 							tempor incididunt.
 						</p>
 					</li>
-					<li class="notactive">
-						<div class="Ellipse">
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -328,40 +316,8 @@
 							tempor incididunt.
 						</p>
 					</li>
-					<li class="notactive">
-						<div class="Ellipse">
-							<div class="myImage"></div>
-						</div>
-						<h2>Tempor incididunt</h2>
-						<p>
-							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
-							tempor incididunt.
-						</p>
-					</li>
-				</ul>
-				<ul>
-					<li class="notactive">
-						<div class="Ellipse">
-							<div class="myImage"></div>
-						</div>
-						<h2>Tempor incididunt</h2>
-						<p>
-							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
-							tempor incididunt.
-						</p>
-					</li>
-					<li class="notactive">
-						<div class="Ellipse">
-							<div class="myImage"></div>
-						</div>
-						<h2>Tempor incididunt</h2>
-						<p>
-							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
-							tempor incididunt.
-						</p>
-					</li>
-					<li class="notactive">
-						<div class="Ellipse">
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -371,9 +327,9 @@
 						</p>
 					</li>
 				</ul>
-				<ul>
-					<li class="notactive">
-						<div class="Ellipse">
+				<ul class="accordeon-menu">
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -382,8 +338,8 @@
 							tempor incididunt.
 						</p>
 					</li>
-					<li class="notactive">
-						<div class="Ellipse">
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -392,8 +348,40 @@
 							tempor incididunt.
 						</p>
 					</li>
-					<li class="notactive">
-						<div class="Ellipse">
+					<li class="accordeon-item">
+						<div class="ellipse">
+							<div class="myImage"></div>
+						</div>
+						<h2>Tempor incididunt</h2>
+						<p>
+							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
+							tempor incididunt.
+						</p>
+					</li>
+				</ul>
+				<ul class="accordeon-menu">
+					<li class="accordeon-item">
+						<div class="ellipse">
+							<div class="myImage"></div>
+						</div>
+						<h2>Tempor incididunt</h2>
+						<p>
+							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
+							tempor incididunt.
+						</p>
+					</li>
+					<li class="accordeon-item">
+						<div class="ellipse">
+							<div class="myImage"></div>
+						</div>
+						<h2>Tempor incididunt</h2>
+						<p>
+							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod 
+							tempor incididunt.
+						</p>
+					</li>
+					<li class="accordeon-item">
+						<div class="ellipse">
 							<div class="myImage"></div>
 						</div>
 						<h2>Tempor incididunt</h2>
@@ -407,7 +395,7 @@
 		</div>			
 	</section>
 
-	<section class="section7">
+	<section class="section7" id="sector8">
 		<div class="container">
 			<div class="box">
 				<h1>How Its Work</h1>
@@ -425,11 +413,11 @@
 		</div>
 	</section>
 
-	<section class="section8">
+	<section class="section8" id="sector9">
 		<img src="images/Layer_92.png"><img src="images/Layer_93.png"><img src="images/Layer_94.png"><img src="images/Layer_95.png">
 	</section>
 
-	<section class="section9">
+	<section class="section9" id="sector10">
 		<div class="container">
 			<h1>Latest From the Blog</h1>
 			<h3>Lorem ipsum dolor sit amet, cetero temporibus ex nec. 
@@ -439,7 +427,7 @@
 			<div class="photo">
 				<h2>No nam conceptam suscipiantur . . .</h2>
 				<p>2 days ago</p>
-				<div class="Ellipse2">
+				<div class="ellipse">
 					<img src="images/Link.png">
 				</div>
 				<div class="box"></div>
@@ -447,7 +435,7 @@
 			<div class="photo">
 				<h2>No nam conceptam suscipiantur . . .</h2>
 				<p>2 days ago</p>
-				<div class="Ellipse2">
+				<div class="ellipse">
 					<img src="images/Link.png">
 				</div>
 				<div class="box"></div>
@@ -455,21 +443,31 @@
 		</div>	
 	</section>
 	
-	<section class="section10">
+	<section class="section10" id="sector11">
 		<h1>Our partners</h1>
 		<div class="box">
-			<img src="images/Layer_27.png">
-			<img src="images/Layer_28.png">
-			<img src="images/Layer_108.png">
+			<div class="swiper-container2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+							<img src="images/Layer_27.png">
+					</div>
+					<div class="swiper-slide">
+							<img src="images/Layer_28.png">
+					</div>
+					<div class="swiper-slide">
+							<img src="images/Layer_108.png">
+					</div>
+				</div>
+			</div>
 		</div>
+		<script src="js/carousel.js"></script>
 	</section>
 
-
-	<section class="footer">
+	<section class="footer" id="sector12">
 		<div class="container">
 			<h1>Contact us</h1>
-					<h2 class="bold">8901 Marmora Road, Glasgow, D04 89GR. </h2>
-					<h2 class="reg">Telephone:  +1 800 603 6035</h2>
+				<h2 class="bold">8901 Marmora Road, Glasgow, D04 89GR. </h2>
+				<h2 class="reg">Telephone:  +1 800 603 6035</h2>
 			<div class="ico">
 				<div class="ellipse1">
 					<img src="images/face.png">
@@ -483,8 +481,15 @@
 			</div>
 			<h3>Colorful Flat © 2015. All Rights Reserved</h3>
 		</div>
-			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3237.40774946213!2d31.996837371268985!3d46.97495924010081!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1583158654371!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+		<div id="map"></div>
+		<script src="js/map.js"></script>
 	</section>
+
 </div>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbEOf20l5H8agN5qbVSPjkgPQHmFsTnRA&callback=initMap">
+</script>
+
 </body>
 </html>

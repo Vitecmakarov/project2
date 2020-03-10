@@ -1,26 +1,32 @@
-var bgColor1 = {r:200,g:23,b:17}
-var bgColor2 = {r:10,g:150,b:142}
+var page = document.querySelector('.page');
 
-window.onload = function(){
-	window.dispatchEvent(new Event("scroll"));
-}
-window.addEventListener("scroll",function(){
-var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-var scrollHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
-)-innerHeight;
-var percent = scrollTop/scrollHeight;
-var color = {r:0,g:0,b:0};
-var tmp = Math.abs(bgColor1.r - bgColor2.r)*percent;
-color.r =  Math.ceil(bgColor1.r > bgColor2.r ? bgColor1.r - tmp: bgColor1.r + tmp);
+page.addEventListener('scroll', function(){
 
- tmp = Math.abs(bgColor1.g - bgColor2.g)*percent;
-color.g =  Math.ceil(bgColor1.g > bgColor2.g ? bgColor1.g - tmp: bgColor1.g + tmp);
+var sector1= block_height('sector1');
 
-tmp = Math.abs(bgColor1.b - bgColor2.b)*percent;
-color.b =  Math.ceil(bgColor1.b > bgColor2.b ? bgColor1.b - tmp: bgColor1.b + tmp);
+var back_butt= document.querySelector('.back_button');
 
-document.getElementsByClassName(".line").style.background = "rgb("+color.r+","+color.g+","+color.b+")";
+document.getElementById('back_button').addEventListener('click', function(){
+  ScrollUp();
 });
+
+function ScrollUp(){
+  var t,s;
+  s=page.scrollTop||page.pageYOffset;
+  t=setInterval(function(){if(s>0)page.scroll(0,s-=40);else clearInterval(t)},5);
+}
+
+  if (this.scrollTop>sector1) {
+    back_butt.style.display= "block";
+  }
+  if (this.scrollTop<sector1) {
+    back_butt.style.display= "none";
+  }
+});
+
+function block_height(elem){
+  var block = document.getElementById(elem);
+  var elem_height = window.getComputedStyle(block).height;
+  var newheight = elem_height.substring(0, elem_height.length - 2);
+  return Math.round(newheight);
+}

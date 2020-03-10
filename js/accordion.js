@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", accordeon);
  function accordeon() {
 	 var accordIco = document.querySelectorAll("div.myImage");
-	 var accordTitles = document.querySelectorAll("li");
+	 var accordTitles = document.querySelectorAll("li.accordeon-item");
 	 var text = document.querySelectorAll("section.section6 p");
 	 var index;
   
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", accordeon);
 		 btn.addEventListener("click", function() {
 			if (index !== i) openBlocks(i);
 			if (index !== void 0) closeBlocks(index);
-			index = index !== i ? i : void 0
+			index = index !== i ? i : void 0;
 		 });
 	 });
  }
