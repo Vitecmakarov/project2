@@ -13,7 +13,7 @@ h1{
     width: 95%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     h1{
         font-size: 4rem;
         line-height: 4rem;
@@ -31,7 +31,7 @@ h2{
     width: 95%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     h2{
         font-size: 2rem;
         line-height: 2rem;
@@ -51,7 +51,7 @@ h3{
     width: 95%;
     margin-top: 5%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     h3{
         font-size: 2rem;
         line-height: 2rem;
@@ -69,7 +69,7 @@ p{
     margin: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     p{
         font-size: 2rem;
         line-height: 2rem;
@@ -83,7 +83,7 @@ section{
     padding: 120px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section{
         padding: 200px 0;
     }
@@ -91,7 +91,7 @@ section{
 
 div.container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1190px;
     margin: 0 auto;
     padding: 0 15px;
     text-align: center;
@@ -138,7 +138,7 @@ div.page{
     line-height: 1;
     color:white;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .back_button::before{
         font-size: 10rem;
     }
@@ -149,7 +149,7 @@ div.page{
     0 0 12px -1px white inset;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .back_button{
         width: 140px;
         height: 140px;
@@ -207,7 +207,7 @@ section.header{
     font-size: 55px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .nav__showmenu {
         padding: 0px 20px;
         font-size: 8rem;
@@ -250,7 +250,7 @@ section.header{
     backface-visibility: hidden;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .menu{
         width: 100%;
     }
@@ -271,7 +271,7 @@ section.header{
     line-height: normal;
     font-size: 24px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .menu__showsub{
         font-size: 4rem;
         margin-top: -110px;
@@ -287,7 +287,7 @@ section.header{
     line-height: 4rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .menu__item{
         font-size: 4rem;
         line-height: 8rem;
@@ -346,7 +346,7 @@ section.header div.reg-block{
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.header div.reg-block{
         width:80%;
     }
@@ -367,7 +367,7 @@ section.header div.reg-block input{
     margin-bottom: 3%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.header div.reg-block input{
         width: 80%;
         font-size: 3rem;
@@ -396,7 +396,7 @@ section.header div.reg-block button.butt{
     border-radius: 5px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.header div.reg-block button.butt{
         width: 80%;
         padding: 5% 0;
@@ -431,7 +431,7 @@ section.header div.reg-block button.butt{
     }
    }
 
-   @media (max-width: 1200px) {
+   @media (max-width: 1190px) {
     .pulse{
         animation: pulse 0.4s ease-out;
     }
@@ -452,7 +452,7 @@ section.section1 div.box{
     margin-top: 5%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section1 div.box{
         width: 97%;
         margin-top: 10%;
@@ -467,7 +467,7 @@ section.section1 div.ellipse{
     float: left;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section1 div.ellipse{
         width: 180px;
         height: 180px;
@@ -481,7 +481,7 @@ section.section1 img{
     top: 25%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section1 img{
         width: 50%;
         height: 50%;
@@ -494,7 +494,7 @@ section.section1 p{
     text-align: start;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section1 p{
         margin-left: 21%;
     }
@@ -505,7 +505,7 @@ section.section1 h2{
     text-align: start;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section1 h2{
         margin-left: 21%;
     }
@@ -527,7 +527,7 @@ section.section2 div.box{
     width: 50%;
     margin-top: 5%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 div.box{
         width: 100%;
       }
@@ -539,7 +539,7 @@ section.section2 div.box2{
     height: 100%;
     margin-top: 5%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 div.box2{
         display: none;
 }
@@ -579,7 +579,7 @@ section.section2 h2{
     margin-top: 3%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 h2{
         left: 5%;
     }
@@ -589,7 +589,7 @@ section.section2 p{
     left: 15%;
     margin-top: 5%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 p{
         left: 5%;
     }
@@ -600,7 +600,7 @@ section.section2 div.box_image{
     text-align: start;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 div.logo{
         text-align: center;
         margin: auto;
@@ -611,7 +611,7 @@ section.section2 img{
     position: absolute;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section2 img{
         width: 150px;
         position: relative;
@@ -642,7 +642,7 @@ section.section3 div.box{
     display:inline-block;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section3 div.box{
         width: 90%;
     }
@@ -659,7 +659,7 @@ section.section3 div.ellipse{
     margin: 8% auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section3 div.ellipse{
         width: 200px;
         height: 200px;
@@ -671,7 +671,7 @@ section.section3 h2{
     line-height: 30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section3 h2{
         font-size: 3rem;
         line-height: 3rem;
@@ -684,7 +684,7 @@ section.section3 p{
     margin-top: 5%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section3 p{
         font-size: 3rem;
         line-height: 3rem;
@@ -705,7 +705,7 @@ section.section3 p.num::before {
     counter-increment: list1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section3 p.num{
         font-size: 5rem;
         line-height: 5rem;
@@ -726,7 +726,7 @@ section.section4  div.logo{
     margin:45px auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section4  div.logo{
         width: 100px;
         height: 100px;
@@ -742,7 +742,7 @@ section.section4  p.text{
     left: 25%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section4  p.text{
         width: 97%;
         left: 0%;
@@ -755,7 +755,7 @@ section.section4  div.img{
     height: 80px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section4  div.img{
         width: 240px;
         height: 240px;
@@ -782,7 +782,7 @@ section.section5 div.box{
     display: inline-block;
     margin: 0 2%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section5 div.box{
         width: 90%;
       }
@@ -794,7 +794,7 @@ section.section5 img{
     margin-bottom: 10%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section5 img{
         width: 40%;
         margin-top: 15%;
@@ -815,7 +815,7 @@ section.section5 p.blue{
     height: 15px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     .swiper-pagination-bullet{
         width: 40px;
         height: 40px;
@@ -826,21 +826,21 @@ section.section5 p.blue{
     background:#333;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section5 p.blue{
         font-size: 3rem;
         line-height: 3rem;
       }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section5 p{
         font-size: 2rem;
         line-height: 2rem;
       }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section5 h2{
         font-size: 3rem;
         line-height: 3rem;
@@ -854,7 +854,7 @@ section.section6{
     padding-bottom: 0;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.section6{
         height: 1870px;
         padding-bottom: 120px;
@@ -863,12 +863,12 @@ section.section6{
 
   section.section6 div.fag{
         width: 100%;
-        max-width: 1200px;
+        max-width: 1190px;
         display: flex;
         justify-content: space-around;
         margin-top: 40px;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1190px) {
         section.section6 div.fag{
             width: 90%;
             display: inline-block;
@@ -892,7 +892,7 @@ section.section6 li.accordeon-item {
     overflow: hidden;
     cursor: pointer;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.section6 li.accordeon-item{
         min-height: 152px;
       }
@@ -903,7 +903,7 @@ section.section6 h2{
     margin-top: 4%;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.section6 h2{
         font-size: 4rem;
         line-height: 6rem;
@@ -917,7 +917,7 @@ section.section6 p{
     transition: .5s ease all !important;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.section6 p{
         font-size: 3rem;
         line-height: 4rem;
@@ -936,7 +936,7 @@ section.section6 div.ellipse{
     margin-right: 5%;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.section6 div.ellipse{
         width: 60px;
         height: 60px;
@@ -948,7 +948,7 @@ section.section6 div.myImage{
     content: url('../images/1.png');
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section6 div.myImage{
         transform: scale(2);
       }
@@ -971,7 +971,7 @@ section.section7 iframe{
     transition: 2s all;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section7 iframe{
         width: 900px;
         height: 600px;
@@ -982,7 +982,7 @@ section.section7 div.container{
     display: flex;
     flex-direction: row-reverse;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section7 div.container{
         flex-direction: column;
     }
@@ -993,7 +993,7 @@ section.section7 div.box{
     margin: 0 15px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section7 div.box{
         width: 100%;
     }
@@ -1007,7 +1007,7 @@ section.section7 div.box{
 section.section7 h1{
     text-align: start;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section7 h1{
         text-align: center;
         margin-top: 5%;
@@ -1019,7 +1019,7 @@ section.section7 p{
     width: 559px;
     margin: 5% 0;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section7 p{
         width: 99%;
         text-align: center;
@@ -1042,7 +1042,7 @@ section.section8{
 section.section8 img{
     width: 25%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section8 img{
         width: 100%;
     }
@@ -1080,7 +1080,7 @@ section.section9 div.photo{
     height: 350px;
     margin: 60px 10px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.photo{
         width: 900px;
         height: 500px;
@@ -1095,7 +1095,7 @@ section.section9 h2 {
     transform: translate(10px,500px);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 h2{
         font-size: 3rem;
     }
@@ -1106,7 +1106,7 @@ section.section9 div.photo:hover h2{
     transition: 1.1s ease all !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.photo:hover h2{
         transform: translate(30px,400px);
     }
@@ -1121,13 +1121,13 @@ section.section9 p{
     text-align: start;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 p{
         font-size: 3rem;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 p{
         transform: translate(30px,500px);
     }
@@ -1138,7 +1138,7 @@ section.section9 div.photo:hover p{
     transition: .5s ease all !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.photo:hover p{
         transform: translate(30px,300px);
     }
@@ -1153,7 +1153,7 @@ section.section9 div.box{
     margin-top: -22%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.box{
         width: 900px;
         height: 500px;
@@ -1182,7 +1182,7 @@ section.section9 div.photo:hover div.ellipse{
     transition: 1s ease all !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.ellipse{
         width: 90px;
         height: 90px;
@@ -1190,7 +1190,7 @@ section.section9 div.photo:hover div.ellipse{
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 div.photo:hover div.ellipse{
         transform: translate(760px,-50px);
     }
@@ -1201,7 +1201,7 @@ section.section9 img{
     margin-top: 25%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.section9 img{
         width: 40%;
         height: 40%;
@@ -1272,7 +1272,7 @@ section.footer div.ico div{
     cursor: pointer;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.footer div.ico div{
         width: 101px;
         height: 100px;
@@ -1314,7 +1314,7 @@ section.footer div.ico img{
     text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
     section.footer div.ico img{
         margin-top: 40%;
         transform: scale(2);
