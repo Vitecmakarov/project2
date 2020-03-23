@@ -13,43 +13,38 @@
 <body>
 	<div class="page" id="page">
 		<script src="js/swiper.min.js"></script>
-		<script src="js/menu.js"></script>
 		<nav class="nav">
 			<input class="nav__check" type="checkbox" id="showmenu"/>
 			<label class="nav__showmenu" for="showmenu">&#9776;</label>
 			<label class="nav__back" for="showmenu"></label>
-			<ul class="menu" id="menu">
+			<div class="menu" id="menu">
 			<a class="menu__item" href="#sector2">About Us</a>
 				<input class="menu__check" type="checkbox" id="menu2">
 				<label class="menu__showsub" for="menu2">&#9660;</label>
-				<ul class="menu__submenu">
-				  <li><a class="menu__item" href="#">Info</a></li>
-				  <li><a class="menu__item" href="#">Company</a></li>
-				</ul>
-			  </li>
-			  <li><a class="menu__item" href="#sector3">Features</a></li>
-			  <li><a class="menu__item" href="#sector4">Advantages</a></li>
-			  <li><a class="menu__item" href="#sector5">Testimonials</a></li>
-			  <li><a class="menu__item" href="#sector6">Our Team</a></li>
-			  <li><a class="menu__item" href="#sector7">FAQs</a></li>
-			  <li><a class="menu__item" href="#sector8">How Its Work</a></li>
-			  <li><a class="menu__item" href="#sector10">Latest From the Blog</a></li>
-			  <li><a class="menu__item" href="#sector11">Our Partners</a></li>
-			  <li><a class="menu__item" href="#sector12">Contact Us</a></li>
-			</ul>
+				<div class="menu__submenu">
+				  <a class="menu__item" href="#">Info</a>
+				  <a class="menu__item" href="#">Company</a>
+				</div>
+			  <a class="menu__item" href="#sector3">Features</a>
+			  <a class="menu__item" href="#sector4">Advantages</a>
+			  <a class="menu__item" href="#sector5">Testimonials</a>
+			  <a class="menu__item" href="#sector6">Our Team</a>
+			  <a class="menu__item" href="#sector7">FAQs</a>
+			  <a class="menu__item" href="#sector8">How Its Work</a>
+			  <a class="menu__item" href="#sector10">Latest From the Blog</a>
+			  <a class="menu__item" href="#sector11">Our Partners</a>
+			  <a class="menu__item" href="#sector12">Contact Us</a>
+			</div>
+			<a class="back_button" id="back_button" href="#sector1"></a>
 		</nav>
-
-		<div class="back_button" id="back_button">
-			<img src="images/left.png">
-		</div>
-
-	<header>
+		<script src="js/menu.js"></script>
 	<section class="header" id="sector1">
 		<div class="container">
 			<h2>Colorful Flat</h2> 
 			<p class="header">The best open page template  for</p>
 			<p class="web-proffe">Web Proffesionals</p class="web-proffe">
 			<div class="reg-block">
+				<div class="pulse-around"></div>
 				<input value="Full name"></input>
 				<input value="E-mail"></input>
 				<input value="Phone"></input>
@@ -58,7 +53,6 @@
 			</div>
 		</div>
 	</section>
-	</header>
 
 	<section class="section1" id="sector2">
 		<div class="container">
@@ -156,7 +150,7 @@
 				exerci noster omnium. Habeo dicam vim at, sale possit nostrum et pro.</h3>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">1.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Cu tantas platonem</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -164,7 +158,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">2.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Aperiam suscipiantur</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -172,7 +166,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">3.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Nusquam facilisis</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -180,7 +174,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">4.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Ex vel legimus</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -189,7 +183,7 @@
 			<div class="break"></div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">5.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Nusquam facilisis</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -197,7 +191,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">6.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Ex vel legimus</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -205,7 +199,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">7.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Aperiam suscipiantur</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -213,7 +207,7 @@
 			</div>
 			<div class="box">
 				<div class="ellipse">
-					<p class="num">8.</p>
+					<p class="num"></p>
 				</div>
 				<h2>Cu tantas platonem</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -408,7 +402,7 @@
 					appareat ponderum eos.</p>
 			</div>
 			<div class="box">
-				<iframe width="560" height="340" src="https://www.youtube.com/embed/Ok2VamxrYAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="560" id="video" height="340" src="https://www.youtube.com/embed/Ok2VamxrYAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
@@ -484,12 +478,11 @@
 		<div id="map"></div>
 		<script src="js/map.js"></script>
 	</section>
-
+	<script src="js/back_button.js"></script>
 </div>
 
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbEOf20l5H8agN5qbVSPjkgPQHmFsTnRA&callback=initMap">
 </script>
-
 </body>
 </html>

@@ -1,32 +1,37 @@
-var page = document.querySelector('.page');
+// const anchors = document.querySelectorAll('a.menu__item')
 
-page.addEventListener('scroll', function(){
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault()
+    
+//     const blockID = anchor.getAttribute('href')
+    
+//     document.querySelector(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }
 
-var sector1= block_height('sector1');
 
-var back_butt= document.querySelector('.back_button');
+document.querySelector('nav').addEventListener('click', function (e) {
+  var dest = e.target.href;
+  
+   if (!dest || !(dest = dest.split('#')[1])) return;
 
-document.getElementById('back_button').addEventListener('click', function(){
-  ScrollUp();
-});
+   e.preventDefault();
 
-function ScrollUp(){
-  var t,s;
-  s=page.scrollTop||page.pageYOffset;
-  t=setInterval(function(){if(s>0)page.scroll(0,s-=40);else clearInterval(t)},5);
-}
+  var p = document.querySelector('.page');
+   var a = document.getElementById(dest);
 
-  if (this.scrollTop>sector1) {
-    back_butt.style.display= "block";
-  }
-  if (this.scrollTop<sector1) {
-    back_butt.style.display= "none";
-  }
-});
-
-function block_height(elem){
-  var block = document.getElementById(elem);
-  var elem_height = window.getComputedStyle(block).height;
-  var newheight = elem_height.substring(0, elem_height.length - 2);
-  return Math.round(newheight);
-}
+   var st = p.scrollTop;
+   var d = a.getBoundingClientRect().top - p.getBoundingClientRect().top - 8;
+   var s = d / 1500;
+   var pt = performance.now();
+  
+   requestAnimationFrame(function f(t) {
+     var cur = p.scrollTop = st + s * (t - pt);
+     if (s<0 ? cur > st + d : cur < st + d) requestAnimationFrame(f);
+     else requestAnimationFrame(() => p.scrollTop = st + d);
+   });
+ });
